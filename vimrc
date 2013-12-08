@@ -1,5 +1,3 @@
-execute pathogen#infect()
-
 "TAB is 4 spaces
 set tabstop=4
 set shiftwidth=4
@@ -79,6 +77,12 @@ set smarttab
 
 autocmd FileType c,cpp,h autocmd BufWritePre <buffer> :%s/\s\+$//e
 autocmd BufNewFile,BufRead *.quicktask setf quicktask
+
+filetype off
+execute pathogen#infect()
+filetype plugin on
+filetype plugin indent on
+
 
 "quicktask collapse
 nmap f :call CloseFoldIfOpen()<CR>
