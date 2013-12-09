@@ -86,3 +86,7 @@ filetype plugin indent on
 
 "quicktask collapse
 nmap f :call CloseFoldIfOpen()<CR>
+
+"enable pyflakes for syntastic
+let g:syntastic_python_checkers=['pyflakes']
+
