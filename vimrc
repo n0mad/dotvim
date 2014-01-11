@@ -54,13 +54,6 @@ map <left> <nop>
 map <right> <nop>
 map . <nop>
 
-"different colour schemes for console and gui modes
-if &t_Co >=256 || has("gui_running")
-    colorscheme mustang 
-else
-    colorscheme delek
-endif
-
 "more useful than absolute ordering: easy jumps with 10k or 3j
 set relativenumber
 "';' acts similar to ':' - this save me thousand movements a day
@@ -83,6 +76,15 @@ execute pathogen#infect()
 filetype plugin on
 filetype plugin indent on
 
+
+"different colour schemes for console and gui modes
+if &t_Co >=256 || has("gui_running")
+    "colorscheme mustang 
+    let g:seoul256_background=233
+    colorscheme seoul256
+else
+    colorscheme delek
+endif
 
 "quicktask collapse
 nmap f :call CloseFoldIfOpen()<CR>
