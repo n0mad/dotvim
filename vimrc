@@ -78,17 +78,17 @@ filetype plugin indent on
 
 
 "different colour schemes for console and gui modes
-if &t_Co >=256 || has("gui_running")
+"if &t_Co >=256 || has("gui_running")
     "colorscheme mustang 
     let g:seoul256_background=233
     colorscheme seoul256
-else
-    colorscheme delek
-endif
+"else
+"    colorscheme delek
+"endif
 
 "quicktask collapse
 nmap f :call CloseFoldIfOpen()<CR>
 
 "enable pyflakes for syntastic
 let g:syntastic_python_checkers=['pyflakes']
-
+map <Leader>p :set paste<CR>o<esc>"*]p:set nopaste<cr>
